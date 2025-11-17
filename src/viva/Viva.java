@@ -36,6 +36,7 @@ public class Viva {
                 continue;
             }
             
+            
             System.out.println("Amount of water used(0-50000): ");
             int amount_water = t.nextInt();
             t.nextLine();
@@ -45,9 +46,9 @@ public class Viva {
                 break;}
             if (amount_water<0 || amount_water>50000){
                 System.out.println("Invalid input. Try to enter again the amount within 0 to 50000");
-                t.nextLine();
+                amount_water = t.nextInt();
                 }
-        
+            
             
         double bills = 0;
              
@@ -78,7 +79,7 @@ public class Viva {
         System.out.printf("Total Bill: RM%.2f%n", bills);
         System.out.println("Thank you for conserving water!\n");        
     
-            System.out.println("Do you want to continue? Press 1 for yes or 0 for quitting. ");
+            System.out.println("Do you want to continue? Press other integer for yes or 0 for quitting. ");
             int ans = t.nextInt();
             t.nextLine(); // input and loop from the top
             // instead of if (ans == 1) , can direct go for answer == 0
@@ -86,10 +87,14 @@ public class Viva {
             if (ans == 0){
                 System.out.println("Quitting.... ");
                 break;}
+            
+            else
+                continue;
                 
-            }
+        }
         
             t.close();
         }
         
 }
+
