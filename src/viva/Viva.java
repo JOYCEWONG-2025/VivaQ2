@@ -44,9 +44,11 @@ public class Viva {
             if (amount_water==0){
                 System.out.println("Exiting....");
                 break;}
-            if (amount_water<0 || amount_water>50000){
+            
+            while (amount_water<0 || amount_water>50000){
                 System.out.println("Invalid input. Try to enter again the amount within 0 to 50000");
                 amount_water = t.nextInt();
+                
                 }
             
             
